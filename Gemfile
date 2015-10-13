@@ -25,10 +25,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'devise'
 gem 'figaro'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+
 # Image uploading/resizing.
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
