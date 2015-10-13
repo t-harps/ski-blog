@@ -4,7 +4,12 @@
   <strong>Title:</strong>
   <%= @post.title %>
 </p>
-
+<div class="image">
+  <%= image_tag @post.image.url if @post.image? %>
+</div>
+<div class="video">
+  <%= youtube_video @post.video if @post.video? %>
+</div>
 <p>
   <strong>Content:</strong>
   <%= @post.content %>
