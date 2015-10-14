@@ -1,1 +1,1 @@
-admin = Admin.create! :email => 'no_one_likes_you@hotmail.co.uk', :password => ENV[PASSWORD], :password_confirmation => ENV[PASSWORD]
+admin = Admin.create! :email => 'no_one_likes_you@hotmail.co.uk', :password => ENV['PASSWORD'], :password_confirmation => ENV['PASSWORD']

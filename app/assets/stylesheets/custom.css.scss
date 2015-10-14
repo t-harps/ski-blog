@@ -61,6 +61,7 @@ h6, .h6 {
 /* Active state gets a caret at the bottom */
 .blog-nav .active {
   color: #fff;
+  text-decoration: none;
 }
 .blog-nav .active:after {
   position: absolute;

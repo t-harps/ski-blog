@@ -1,19 +1,10 @@
 <p id="notice"><%= notice %></p>
-<div class="blog-post">
-  <h2 class="blog-post-title"><%= @post.title %></h2>
-  <p class="blog-post-meta"><%= @post.created_at %> by Tom</p>
-  <p>
-    Tags:
-    <% @post.tags.each do |tag| %>
-      <%= link_to tag.name, tag_path(tag) %>
-    <% end %>
-  </p>
-  <p> <%= @post.content %> </p>
-  <p class="video"><%= youtube_video @post.video if @post.video? %></p>
-  <p class="image"><%= image_tag @post.image.url if @post.image? %></p>
-</div>
 
-<%= link_to "Delete", @post, method: :delete,
-                                       data: { confirm: "You sure?" } %> |
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= render @post %>
+
+<% if admin_signed_in? %>
+  <%= link_to "Delete", @post, method: :delete,
+                                         data: { confirm: "You sure?" } %> |
+  <%= link_to 'Edit', edit_post_path(@post) %> |
+<% end %>
 <%= link_to 'Back', posts_path %>

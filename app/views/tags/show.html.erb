@@ -1,7 +1,12 @@
-<h1>Posts Tagged with <%= @tag.name %></h1>
-
-<ul>
-  <% @tag.posts.each do |post| %>
-    <li><%= link_to post.title, post %></li>
-  <% end %>
-</ul>
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <h1 class="blog-post-title">Posts tagged with <%= @tag.name %></h1>
+    <% @tag.posts.each do |post| %>
+      <%= render post %>
+    <% end %>
+    <% @posts = @tag.posts.paginate(:page => params[:page], :per_page => 5) %>
+    <%= will_paginate @posts %>
+  </div><!-- /.blog-main -->
+  <%= render 'shared/sidebar' %>
+</div>
