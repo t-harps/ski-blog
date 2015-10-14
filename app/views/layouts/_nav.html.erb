@@ -1,10 +1,10 @@
 <div class="blog-masthead">
   <div class="container">
     <nav class="blog-nav">
-      <% home_active = "active" if current_page?('http://localhost:3000/') %>
-      <% video_active = "active" if current_page?('http://localhost:3000/tags/2') %>
-      <% image_active = "active" if current_page?('http://localhost:3000/tags/6') %>
-      <% text_active = "active" if current_page?('http://localhost:3000/tags/10') %>
+      <% home_active = "active" if current_page?('/') %>
+      <% video_active = "active" if current_page?('/tags/2') %>
+      <% image_active = "active" if current_page?('/tags/6') %>
+      <% text_active = "active" if current_page?('/tags/10') %>
       <a class="blog-nav-item <%= home_active %>" href='http://localhost:3000/'>Home</a>
       <a class="blog-nav-item <%= video_active %>" href="http://localhost:3000/tags/2">Video</a>
       <a class="blog-nav-item <%= image_active %>" href="http://localhost:3000/tags/6">Image</a>
