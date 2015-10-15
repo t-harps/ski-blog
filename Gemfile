@@ -26,6 +26,7 @@ gem 'devise'
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'bootstrap-will_paginate', '0.0.10'
+gem 'by_star', :git => "git://github.com/radar/by_star"
 
 # Image uploading/resizing.
 gem 'carrierwave'

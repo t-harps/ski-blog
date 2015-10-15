@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="col-sm-8 blog-main">
+    <h1 class="blog-post-title">Posts published in <%= params[:year] %>.<%= params[:month] %></h1>
+    <% @posts.each do |post| %>
+      <%= render post %>
+    <% end %>
+    <%= will_paginate %>
+  </div><!-- /.blog-main -->
+  <%= render 'shared/sidebar' %>
+</div><!-- /.row -->

@@ -3,11 +3,12 @@ Rails.application.routes.draw do
   resources :posts
   resources :tags
   resources :taggings
+  root 'posts#index'
+  get 'posts/by_year_and_month/:year/:month' => 'posts#by_year_and_month', :as=> :posts_by_year_and_month
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   
-  root 'posts#index'
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

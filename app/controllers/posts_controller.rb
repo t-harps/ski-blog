@@ -62,6 +62,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def by_year_and_month
+    @posts = Post.by_year(params[:year]).by_month(params[:month]).order("created_at DESC").paginate :page => params[:page], :per_page => 5
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post

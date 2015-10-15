@@ -7,4 +7,8 @@ module ApplicationHelper
   def active_page?(url)
   	current_page?(url)
   end 
+
+  def get_url(string)
+  	Tag.find_by(:name => string).id
+  end
 end
