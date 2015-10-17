@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admins 
   resources :posts
-  resources :tags
-  resources :taggings
+  resources :tags, only: [:show, :index]
   root 'posts#index'
   get 'posts/by_year_and_month/:year/:month' => 'posts#by_year_and_month', :as=> :posts_by_year_and_month
 
