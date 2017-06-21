@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
@@ -32,8 +31,7 @@ gem 'by_star', :git => "git://github.com/radar/by_star"
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog'
-
-
+gem 'omniauth-coposition-oauth2', :git => "git://github.com/earlymarket/omniauth-coposition-oauth2"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,6 +47,5 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
-  gem 'puma',           '2.11.1'
+  gem 'puma'
 end
-

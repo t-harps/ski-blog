@@ -9,6 +9,7 @@ module ApplicationHelper
   end 
 
   def get_url(string)
-  	Tag.find_by(:name => string).id
+  	tag = Tag.find_by(name: string)
+    tag.id if tag
   end
 end
