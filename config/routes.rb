@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:show, :index]
   root 'posts#index'
   get 'posts/by_year_and_month/:year/:month' => 'posts#by_year_and_month', :as=> :posts_by_year_and_month
+  get '/auth/coposition_oauth2/callback', to: 'devise/sessions#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
